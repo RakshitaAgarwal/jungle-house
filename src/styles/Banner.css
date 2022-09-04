@@ -1,0 +1,34 @@
+.jh-banner {
+	color: black;
+	text-align: right;
+	padding: 32px;
+	border-bottom: solid 3px black;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	align-items: center;
+}
+
+.jh-title {
+	padding-left: 32px;
+}
+
+.jh-logo {
+	height: 45px;
+	width: 45px;
+}
+/* .jh-banner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 32px;
+    border-bottom: solid 3px black;
+}
+.jh-title{
+    color: black;
+    padding-left:32px;
+}
+.jh-logo{
+    height: 50px;
+}
+ */

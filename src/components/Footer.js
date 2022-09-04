@@ -1,32 +1,33 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import '../styles/Footer.css'
 
-function Footer(){
-    const [inputValue, setInputValue] = useState('')
+function Footer() {
+  const [inputValue, setInputValue] = useState('')
 
-    function handleBlur(){
-        if(!inputValue.includes('@'))
-           alert('Error: no @ has been entered. This is not a valid email address.')
+  function handleInput(e) {
+    setInputValue(e.target.value)
+  }
+
+  function handleBlur() {
+    if (!inputValue.includes('@')) {
+      alert(
+        'Error: This is not a valid address because it is missing an @ symbol 😥'
+      )
     }
+  }
 
-    return(
-        <footer className='jh-footer'>
-            <div className='jh-footer-elem'>
-                For Plant Enthusiasts🌿
-            </div>
-            <div className='jh-footer-elem'>
-                Subscribe to our newsletter :
-            </div>
-            <input 
-                type='text' 
-                className='jh-footer-email'
-                placeHolder='Enter your email'
-                value={inputValue} 
-                onChange={(e)=>setInputValue(e.target.value)}
-                onBlur={handleBlur}
-            />
-        </footer>
-    )
+  return (
+    <footer className='jh-footer'>
+      <div className='jh-footer-elem'>For plant enthusiasts 🌿🌱🌵</div>
+      <div className='jh-footer-elem'>Subscribe to our newsletter:</div>
+      <input
+        placeholder='Enter your email'
+        onChange={handleInput}
+        value={inputValue}
+        onBlur={handleBlur}
+      />
+    </footer>
+  )
 }
 
 export default Footer
